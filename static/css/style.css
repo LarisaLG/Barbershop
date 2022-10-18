@@ -1,0 +1,21 @@
+
+/* General  */
+body, a {
+    background-color: #312E38;
+    color: #fff;
+}
+
+
+/*  Navigation  */
+
+.btn-outline-warning {
+    border-color: #FFA500;
+    color: #FFA500;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning:focus {
+    color: #312E38;
+    background-color: #FFA500;
+    border-color: #FFA500;
+}
