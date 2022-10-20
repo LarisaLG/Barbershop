@@ -1,8 +1,9 @@
-from django.urls import path, include
+from django.urls import path
 
 
-from barbershop.views import index
+from . import views
 
 urlpatterns = [
-    path('', index),
+    path('', views.index, name="home"),
+    path('services/', views.services, name="services"),
 ]
