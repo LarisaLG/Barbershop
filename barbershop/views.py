@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 # Create your views here.
-def index(request):
+def home(request):
     """This view renders the index.html page
     and extends the base.html page
     """
@@ -14,4 +14,4 @@ def services(request):
     """
     This view rendes to the user  the services page.
     """
-    return render(request, 'services.html')
+    return render(request, 'barbershop/services.html')
