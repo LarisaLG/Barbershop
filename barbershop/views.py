@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 # Create your views here.
-def home(request):
+def index(request):
     """This view renders the index.html page
     and extends the base.html page
     """
