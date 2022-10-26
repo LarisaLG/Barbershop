@@ -3,20 +3,67 @@
 
 {% block content %}
 
+
+<div class="wrapper">
+
+    <div class="half-block ">
+        <div class="logo-middle">
+            <img class="logo" src="{% static 'img/logo.svg' %}" alt="logo">
+
+            <!-- form start -->
+            <div class="form">
+                <form class="login" method="post" action="#">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword">
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="checkbox">
+                        <label class="form-check-label" for="checkbox">Remember me</label>
+                    </div>
+                    <a href="" class="btn-login">Login</a>
+                </form>
+                <div class="create mt-5">
+                    <p><a href="" class="orange"><span><i
+                                    class="fa-solid fa-arrow-right-to-bracket"></i></span> Create account</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="half-block d-sm-none d-lg-block d-xl-block">
+        <div class="background">
+            <img class="bg signin" src="{% static 'img/signin-bg.png' %}" alt="hero">
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- <h1>This is Home Page!</h1> -->
 
 <!-- <section class="container-fluid d-flex h-100 justify-content-center align-items-center p-0"> -->
-   <div class="container-fluid">
-       <div class="row">
+   <!-- <div class="container-fluid">
+       <div id="sign-form" class="row">
 
-           <div class="col-6 align-self-center">
+           <div class="col-6 align-self-center"> -->
                <!-- <div class="row justify-content-center"> -->
-                   <div class="logo-middle mt-5">
+                   <!-- <div class="logo-middle mt-5">
                        <img class="logo" src=" {% static 'img/logo.svg' %}"
-                           alt="logo">
+                           alt="logo"> -->
 
                        <!-- form start -->
-                       <div class="form">
+                       <!-- <div class="form">
                            <form class="login" method="post" action="">
                                <label for="inputEmail">Email</label>
                                <input type="email" class="form-control" id="inputEmail">
@@ -29,17 +76,17 @@
                                <button type="submit" class="btn btn btn-outline-warning ">Login</button>
                            </form>
                        </div>
-                   </div>
+                   </div> -->
 
                <!-- </div> -->
-           </div>
+           <!-- </div>
 
            <div class="col-6 bg-signin d-none d-sm-none d-lg-block d-xl-block pull-right background">
                <img class="background sign-in d-sm-none d-lg-block d-xl-block"
                    src="{% static 'img/signin-bg.png' %}" alt="hero">
            </div>
        </div>
-   </div>
+   </div> -->
 
 <!-- </section> -->
 

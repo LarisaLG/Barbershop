@@ -1,27 +1,51 @@
 
 /* General  */
+
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 
 body {
     height: 100%;
     background-color: #312E38;
     color: #fff;
-}
-
-/* Header */
-
-.row {
-    height: 700px;
+    text-align: center;
+    margin: 0;
 }
 
 
 /*  Navigation  */
 
+nav {
+    background-color: #312E38;
+}
+
+
 a.nav-link {
-    color: #fff;
+    color: #fff !important;
+}
+
+a.nav-link:active {
+    color: #FF9000 !important;
+}
+
+a.nav-link:hover {
+    border-top: 2px solid #FF9000;
+    border-bottom: 2px solid #FF9000;
+}
+
+/*  Buttons styles */
+
+.btn-login {
+    border: 1px solid #FF9000;
+    background-color: #FF9000;
+    color: #312E38;
+    padding: 10px 85px;
+    height: 50px;
 }
 
 .btn-outline-warning {
@@ -39,27 +63,91 @@ a.nav-link {
 
 /* Index page */
 
-#intro {
-    position: relative;
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.half-block {
+    display: inline-block;
+    width: 50%;
+    height: 100vh;
+    margin: 15vh auto;
+    padding-top: 1px;
+    vertical-align: middle;
+    justify-content: center;
+
+}
+
+img.logo {
+    width: 230px;
+    height: 130px;
 }
 
 .logo-middle {
-    border: 1px solid crimson;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width: 230px;
+    height: 50vh;
+    display: inline-block;
+
+}
+
+.signin {
+    /* display: none; */
+    width: 100%;
+    padding: 0;
 }
 
 .background {
-    /* background-color: blue; */
-    background-image: url("../../static/img/signin-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100%;
-    height: 840px;
-    width: 740px;
     position: fixed;
     top: 0;
     right: 0;
+    width: inherit;
+    height: fit-content;
+}
+
+
+.bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    top: 0;
+    right: 0;
+
+}
+
+.btn-login {
+    display: inline-block;
+    padding: 0 95px;
+    outline: none;
+    border-radius: 4px;
+    height: 38px;
+    line-height: 32px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #312E38;
+    background-color: #FF9000;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    vertical-align: top;
+}
+
+ .btn-login:hover {
+     background-color: #ffcc00;
+     text-decoration: none;
+ }
+
+ .btn-login:active {
+     background-color: #FFA500;
+      color: #000;
+ }
+
+.orange {
+    color: #FF9000;
+}
+
+.orange:hover {
+    text-decoration: none;
+    color: #fff;
 }
