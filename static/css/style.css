@@ -151,3 +151,67 @@ img.logo {
     text-decoration: none;
     color: #fff;
 }
+
+/* Services page */
+
+.services-page {
+    background-image: url("../../static/img/bg-intro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.services-contain {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.services-block {
+    width: 100%;
+    background-color: #fff;
+    opacity: 0.9;
+    margin-top: 5vh;
+    padding-bottom: 10px;
+}
+
+.title-block-services {
+    background-color: #000;
+    opacity: 0.8;
+    color: #fff;
+}
+
+
+.services {
+    background-color: #fff;
+    opacity: 0.8;
+    color: #000;
+}
+
+.services-item {
+    display: inline-block;
+    width: 100%;
+    padding: 0 2px;
+    vertical-align: middle;
+    margin: 0 auto;
+    outline: 1px solid;
+    height: 4em;
+    line-height: 4em;
+}
+
+.text-right,
+.text-left {
+    display: inline-block;
+}
+
+.text-left {
+    float: left;
+}
+
+.text-right {
+    float: right;
+}
+
+.btn-light {
+    border: 1px solid #000;
+}
+
