@@ -32,9 +32,15 @@ def booknow(request):
             return redirect('my_bookings')
         else:
             form = BookingForm()
-            context = {'form': form}
     return render(request, 'barbershop/booknow.html')
 
 
 def my_bookings(request):
     return render(request, 'barbershop/bookings.html')
+
+
+def get_min_date():
+    """Returns the current date plus 2 days, so the user
+    can book appointment 2 days in advance
+    """
+    return datetime.date.today() + datetime.timedelta(days=2)
