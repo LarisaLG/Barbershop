@@ -11,14 +11,14 @@ def index(request):
     """This view renders the index.html page
     and extends the base.html page
     """
-    return render(request, 'barbershop/index.html')
+    return render(request, 'index.html')
 
 
 def services(request):
     """
     This view renders to the user the services page.
     """
-    return render(request, 'barbershop/services.html')
+    return render(request, 'services.html')
 
 
 def booknow(request):
@@ -33,8 +33,8 @@ def booknow(request):
             booking_form.save()
             return redirect('my_bookings')
     form = BookingForm()
-    return render(request, 'barbershop/booknow.html', {'form': form})
+    return render(request, 'booknow.html', {'form': form})
 
 
 def my_bookings(request):
-    return render(request, 'barbershop/bookings.html', {})
+    return render(request, 'bookings.html', {})
