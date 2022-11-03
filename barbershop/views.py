@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from requests import request
 from .models import *
 from .forms import BookingForm
+import datetime
 
 
 # Create your views here.
@@ -31,18 +32,9 @@ def booknow(request):
             booking_form.user = request.user
             booking_form.save()
             return redirect('my_bookings')
-        else:
-            form = BookingForm()
-            context = {'form': form}
+    form = BookingForm()
     return render(request, 'barbershop/booknow.html', {'form': form})
 
 
 def my_bookings(request):
-    return render(request, 'barbershop/bookings.html')
-
-
-def get_min_date():
-    """Returns the current date plus 2 days, so the user
-    can book appointment 2 days in advance
-    """
-    return datetime.date.today() + datetime.timedelta(days=2)
+    return render(request, 'barbershop/bookings.html', {})
