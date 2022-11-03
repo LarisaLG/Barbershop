@@ -1,5 +1,21 @@
 from django import forms
 from .models import Booking
+from django.core.validators import MinValueValidator
+import datetime
+
+
+def get_min_date():
+    """Returns the current date plus 2 days, so the user
+    can book appointment 2 days in advance
+     """
+    return datetime.date.today() + datetime.timedelta(days=2)
+
+
+class DateInput(forms.DateInput):
+    """This class provides a calendar widget that the user can
+    pick the booking date.
+    """
+    input_type = 'date'
 
 
 class BookingForm(forms.ModelForm):
@@ -8,7 +24,7 @@ class BookingForm(forms.ModelForm):
 
     name = forms.CharField()
 
-    email = forms.EmailField(widget=forms.TextInput(),)
+    email = forms.EmailField(required=False, widget=forms.TextInput(),)
 
     phone = forms.IntegerField(required=True, widget=forms.TextInput(),)
 
@@ -18,4 +34,5 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ('name', 'phone', 'service', 'date', 'time')
+        fields = ('name', 'phone', 'email', 'service', 'date', 'time')
+        widgets = {'date': DateInput()}
