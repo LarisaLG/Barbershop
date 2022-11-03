@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from requests import request
 from .models import *
+from .forms import BookingForm
 
 
 # Create your views here.
@@ -32,7 +33,8 @@ def booknow(request):
             return redirect('my_bookings')
         else:
             form = BookingForm()
-    return render(request, 'barbershop/booknow.html')
+            context = {'form': form}
+    return render(request, 'barbershop/booknow.html', {'form': form})
 
 
 def my_bookings(request):
