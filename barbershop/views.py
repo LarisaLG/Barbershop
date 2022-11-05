@@ -36,5 +36,15 @@ def booknow(request):
     return render(request, 'booknow.html', {'form': form})
 
 
-def my_bookings(request):
-    return render(request, 'bookings.html', {})
+def bookings(request): 
+    """This view checks if user is logged in and renders the bookings.html 
+    page which shows user bookings and otherwise it redirects to the signup page.
+    """
+    if request.user.is_authenticated:
+        bookings = Booking.objects.filter(user=request.user)
+        context = {
+           'bookings': bookings
+        }
+        return render(request, 'bookings.html', context)
+    else:
+        return redirect('../accounts/signup')
