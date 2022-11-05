@@ -53,14 +53,13 @@ class Booking(models.Model):
     service = models.ForeignKey(Service, null=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=50)
     email = models.EmailField(blank=True, null=True)
-    # phone = PhoneNumberField(unique=True, null=False, blank=False)
     phoneRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
-    phone = models.CharField(validators=[phoneRegex], max_length=16, unique=True, null=False, blank=False)
+    phone = models.CharField(validators=[phoneRegex], max_length=16, null=True, blank=True)
     date = models.DateField()
     time = models.CharField(max_length=30, choices=HOURS, default='10:00')
 
     class Meta:
-        unique_together = ('user', 'phone', 'service')
+        unique_together = ('user', 'date', 'time', 'service')
 
     def __str__(self):
         return self.name
