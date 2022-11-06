@@ -18,7 +18,8 @@ def services(request):
     """
     This view renders to the user the services page.
     """
-    return render(request, 'services.html')
+    services = Service.objects.all()
+    return render(request, 'services.html', {'services': services})
 
 
 def booknow(request):
@@ -33,14 +34,13 @@ def booknow(request):
             booking_form.user = request.user
             booking_form.save()
             return redirect('bookings')
-            
     form = BookingForm()
     return render(request, 'booknow.html', {'form': form})
 
 
 def bookings(request):
     """This view checks if user is logged in and renders the bookings.html
-    page which shows user bookings and otherwise it redirects to the signup page.
+    page which shows user bookings and otherwise it redirects to the signup page
     """
     if request.user.is_authenticated:
         bookings = Booking.objects.filter(user=request.user)

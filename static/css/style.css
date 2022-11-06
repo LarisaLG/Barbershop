@@ -164,12 +164,14 @@ img.logo {
 .services-contain {
     width: 95%;
     margin: 0 auto;
+    background-color: #fff;
+    opacity: 0.9;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
 }
 
 .services-block {
     width: 100%;
-    background-color: #fff;
-    opacity: 0.9;
     margin-top: 5vh;
     padding-bottom: 10px;
 }
