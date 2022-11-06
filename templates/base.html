@@ -41,7 +41,7 @@
             <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
             {% if user.is_authenticated %}
-            <li class="nav-item"><a class="nav-link" href="#">My bookings</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'bookings' %}">My bookings</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
             <li class="nav-item"><span class="navbar-text ml-3 mr-3">Welcome, {{ user.username }}</span></li>
             {% else %}
@@ -49,9 +49,10 @@
             <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
             {% endif %}
         </ul>
-         <div class="d-inline-flex p-2 d-none d-lg-flex">
-             <a href="#" class="btn btn-outline-warning" type="button">Book Now</a>
-         </div>
+         
+             <a href="{%url 'booknow' %}" class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex"
+                 type="button">Book Now</a>
+        
     </div>
     
 </nav>
