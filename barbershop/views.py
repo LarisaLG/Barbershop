@@ -27,17 +27,19 @@ def booknow(request):
     """
     if request.method == 'POST':
         form = BookingForm(request.POST)
+        print("Errors: ", form.errors)
         if form.is_valid():
             booking_form = form.save(commit=False)
             booking_form.user = request.user
             booking_form.save()
-            return redirect('my_bookings')
+            return redirect('bookings')
+            
     form = BookingForm()
     return render(request, 'booknow.html', {'form': form})
 
 
-def bookings(request): 
-    """This view checks if user is logged in and renders the bookings.html 
+def bookings(request):
+    """This view checks if user is logged in and renders the bookings.html
     page which shows user bookings and otherwise it redirects to the signup page.
     """
     if request.user.is_authenticated:
