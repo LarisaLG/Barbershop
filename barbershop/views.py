@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from requests import request
+from django.shortcuts import render, redirect, get_object_or_404
+# from django.http import HttpResponse
+# from requests import request
 from .models import *
 from .forms import BookingForm
 import datetime
@@ -28,7 +28,7 @@ def booknow(request):
     """
     if request.method == 'POST':
         form = BookingForm(request.POST)
-        print("Errors: ", form.errors)
+        # print("Errors: ", form.errors)
         if form.is_valid():
             booking_form = form.save(commit=False)
             booking_form.user = request.user
@@ -50,3 +50,23 @@ def bookings(request):
         return render(request, 'bookings.html', context)
     else:
         return redirect('../accounts/signup')
+
+
+def change_booking(request, booking_id):
+    """The view that renders the change_booking page where the user can
+    update a current booking.
+    """
+    record = get_object_or_404(Booking, id=booking_id)
+    if request.user is not record.user:
+        return redirect('bookings')
+
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=record)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'You succesfully updated your booking.')
+            return redirect('bookings')
+    form = BookingForm(instance=record)
+    context = {'form': form}
+
+    return render(request, 'change-booking.html', context)
