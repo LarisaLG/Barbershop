@@ -2,32 +2,34 @@
 {% load static %}
 {% block content %}
 
-<div class="container mt-5 pt-5 text-center">
+<div class="booking-page mt-5 pt-5">
 
    <h3 class="text-center mb-5">Manage your Bookings</h3>
    {% for b in bookings %}
-   <div class="card text-white bg-dark border-secondary ">
-      <div class="card-body">
-
+   <div class="card text-white bg-dark border-secondary">
+      <div class="card-body d-flex">
+         
          <div class="booking-text text-left">
-            <p>Your booking ID is: {{b.id}}</p>
+            <p>Your booking ID is: {{b.id}} </p>
             <p class="text-white"><b>On {{b.date}} at {{b.time}}</b></p>
             <p>You booked:</p>
             <p>{{b.service.service_name}}</p>
-
-            <a href="#" class="card-link btn btn-secondary btn-book-secondary mt-3 mb-3">
-               <i class="fa-solid fa-pen-to-square"></i>Card link</a>
-            <a href="#" class="card-link btn btn-outline-warning btn-book-warning mt-3 mb-3">
-               <i class="fa-solid fa-trash-can"></i>Another link</a>
+            <p><b>Balance to pay: €{{b.service.price}}</b></p>
+            
+            <a href="{% url 'change_booking' b.id %}"
+               class="card-link btn btn-secondary btn-book-secondary mt-3 mb-3">
+               <i class="fa-solid fa-pen-to-square"></i> Change</a>
+            <a href="" class="card-link btn btn-outline-warning btn-book-warning mt-3 mb-3">
+               <i class="fa-solid fa-trash-can"></i> Delete</a>
 
          </div>
       </div>
    </div>
 
-     <!-- Show message if there are no bookings -->
+   
 
    {% endfor %}
 
 </div>
 
- {% endblock content %}
+{% endblock content %}
