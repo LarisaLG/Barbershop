@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from .forms import BookingForm
 import datetime
+from django.contrib import messages
 
 
 # Create your views here.
@@ -57,8 +58,6 @@ def change_booking(request, booking_id):
     update a current booking.
     """
     record = get_object_or_404(Booking, id=booking_id)
-    if request.user is not record.user:
-        return redirect('bookings')
 
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=record)
@@ -67,6 +66,6 @@ def change_booking(request, booking_id):
             messages.success(request, 'You succesfully updated your booking.')
             return redirect('bookings')
     form = BookingForm(instance=record)
-    context = {'form': form}
+    context = {'form': form, 'record': record}
 
     return render(request, 'change-booking.html', context)
