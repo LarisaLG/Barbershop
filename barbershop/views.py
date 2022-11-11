@@ -69,3 +69,22 @@ def change_booking(request, booking_id):
     context = {'form': form, 'record': record}
 
     return render(request, 'change-booking.html', context)
+
+
+def delete_booking(request, booking_id):
+    """
+    Function enables user to delete a booking record
+    """
+  
+    record = get_object_or_404(Booking, id=booking_id)
+    if request.method == "POST":
+        form = BookingForm(request.POST, instance=record)
+        if record.delete():
+            messages.success(request, 'Your booking has been deleted.')
+            return redirect('bookings')
+
+    form = BookingForm(instance=record)
+    context = {
+        'form': form, 'record': record}
+    return render(request, 'delete-booking.html', context)
+
