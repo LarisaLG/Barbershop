@@ -19,7 +19,8 @@
             <a href="{% url 'change_booking' b.id %}"
                class="card-link btn btn-secondary btn-book-secondary mt-3 mb-3">
                <i class="fa-solid fa-pen-to-square"></i> Change</a>
-            <a href="" class="card-link btn btn-outline-warning btn-book-warning mt-3 mb-3">
+            <a href="{% url 'delete_booking' b.id %}"
+               class="card-link btn btn-outline-warning btn-book-warning mt-3 mb-3">
                <i class="fa-solid fa-trash-can"></i> Delete</a>
 
          </div>
