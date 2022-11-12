@@ -1,11 +1,44 @@
-{% extends "account/base.html" %}
-
+{% extends "base.html" %}
+{% load static %}
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
-
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+
+<div class="wrapper">
+
+  <div class="half-block ">
+    <div class="logo-middle">
+
+      <h3 class="text-center mb-5">Sign Up</h3>
+      <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="account-link orange">sign
+          in</a>.{% endblocktrans %}</p>
+
+      <!-- form start -->
+      <div class="form">
+        <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <button class="" type="submit">{% trans "Sign Up" %} &raquo;</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="half-block d-sm-none d-lg-block d-xl-block">
+    <div class="background">
+      <img class="bg signin" src="{% static 'img/bg-register.png' %}" alt="hero">
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}
+<!-- <h1>{% trans "Sign Up" %}</h1>
 
 <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
@@ -16,6 +49,6 @@
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
   <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
+</form> -->
 
-{% endblock %}
+
