@@ -10,10 +10,10 @@
 
 
 body {
+    font-family: 'Roboto Slab', serif;
     height: 100%;
     background-color: #312E38;
     color: #fff;
-    text-align: center;
     margin: 0;
 }
 
@@ -21,20 +21,15 @@ body {
 /***  Navigation  ***/
 
 nav {
-    background-color: #312E38;
+    font-size: 15px;
+    z-index: 5;
 }
-
 
 a.nav-link {
-    color: #fff !important;
-}
-
-a.nav-link:active {
-    color: #FF9000 !important;
+  border-bottom: 2px solid transparent;
 }
 
 a.nav-link:hover {
-    border-top: 2px solid #FF9000;
     border-bottom: 2px solid #FF9000;
 }
 
@@ -63,20 +58,9 @@ a.nav-link:hover {
 
 /*** Index page ***/
 
-.wrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.half-block {
-    display: inline-block;
+.half-block, .half-bg {
     width: 50%;
     height: 100vh;
-    margin: 15vh auto;
-    padding-top: 1px;
-    vertical-align: middle;
-    justify-content: center;
-
 }
 
 img.logo {
@@ -84,35 +68,15 @@ img.logo {
     height: 130px;
 }
 
-.logo-middle {
-    width: 230px;
-    height: 50vh;
-    display: inline-block;
 
-}
-
-.signin {
-    /* display: none; */
-    width: 100%;
-    padding: 0;
-}
-
-.background {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: inherit;
-    height: fit-content;
-}
-
-
-.bg {
+.half-bg {
+    background-image: url("../../static/img/bg-home-md.jpg");
     background-repeat: no-repeat;
+    background-position: -5rem 0;
     background-size: cover;
-    height: 100vh;
-    top: 0;
-    right: 0;
-
+    height: auto;
+    margin-top: -60px;
+    z-index: 2;
 }
 
 .btn-login {
@@ -134,13 +98,13 @@ img.logo {
 }
 
  .btn-login:hover {
-     background-color: #ffcc00;
-     text-decoration: none;
- }
+    background-color: #ffcc00;
+    text-decoration: none;
+}
 
  .btn-login:active {
-     background-color: #FFA500;
-      color: #000;
+    background-color: #FFA500;
+    color: #000;
  }
 
 .orange {
@@ -151,6 +115,7 @@ img.logo {
     text-decoration: none;
     color: #fff;
 }
+
 
 /*** Services page ***/
 
