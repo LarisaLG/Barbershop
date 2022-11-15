@@ -40,12 +40,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto">
-            <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+            <li class="nav-item text-white"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
             {% if user.is_authenticated %}
             <li class="nav-item"><a class="nav-link" href="{% url 'bookings' %}">My bookings</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
-            <li class="nav-item"><span class="navbar-text ml-3 mr-3">Welcome, {{ user.username }}</span></li>
+            <li class="nav-item"><span class="navbar-text text-white ml-3 mr-3">Welcome, {{ user.username }}</span></li>
             {% else %}
             <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Sign up</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
