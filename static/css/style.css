@@ -1,5 +1,5 @@
 
-/* General  */
+/*** General  ***/
 
 
 * {
@@ -18,7 +18,7 @@ body {
 }
 
 
-/*  Navigation  */
+/***  Navigation  ***/
 
 nav {
     background-color: #312E38;
@@ -38,7 +38,7 @@ a.nav-link:hover {
     border-bottom: 2px solid #FF9000;
 }
 
-/*  Buttons styles */
+/***  Buttons styles ***/
 
 .btn-login {
     border: 1px solid #FF9000;
@@ -61,7 +61,7 @@ a.nav-link:hover {
 }
 
 
-/* Index page */
+/*** Index page ***/
 
 .wrapper {
     display: flex;
@@ -152,7 +152,7 @@ img.logo {
     color: #fff;
 }
 
-/* Services page */
+/*** Services page ***/
 
 .services-page {
     background-image: url("../../static/img/bg-intro.jpg");
@@ -217,3 +217,32 @@ img.logo {
     border: 1px solid #000;
 }
 
+
+/*** Booknow page ***/
+
+.booknow-page {
+    background-image: url("../../static/img/bg-intro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.booknow-contain {
+    display: inline-block;
+    margin: 0 auto;
+    background-color: #312E38;
+    opacity: 0.9;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+}
+
+.booknow-block {
+    width: 100%;
+    margin-top: 5vh;
+    font-weight: 500;
+    min-width: fit-content;
+}
+
+.booknow-block a {
+    color: #FF9000;
+}
