@@ -6,9 +6,9 @@
 {% block content %}
 
 
-<div class="wrapper">
+<div class="wrapper d-flex justify-content-center">
 
-  <div class="half-block h-100 d-flex justify-content-center align-items-center ">
+  <div class="half-block  d-flex h-100 d-flex justify-content-center align-items-center ">
     <div class="logo-middle">
         <h3 class="text-center mb-5">Sign in</h3>
         <p>{% blocktrans %}If you have not created an account yet, then please
@@ -28,10 +28,7 @@
     </div>
   </div>
 
-  <div class="half-block d-sm-none d-lg-block d-xl-block">
-    <div class="background">
-      <img class="bg signin" src="{% static 'img/bg-login.jpg' %}" alt="hero">
-    </div>
+  <div class="half-bg bg-login d-sm-none d-lg-block d-xl-block">
   </div>
 
 </div>

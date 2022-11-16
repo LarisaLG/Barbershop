@@ -5,14 +5,14 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 {% block content %}
 
-<div class="wrapper">
+<div class="wrapper d-flex">
 
   <div class="half-block h-100 d-flex justify-content-center align-items-center ">
     <div class="logo-middle">
 
       <h3 class="text-center mb-5">Sign Up</h3>
       <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="account-link orange">sign
-          in</a>.{% endblocktrans %}</p>
+          in</a>{% endblocktrans %}</p>
 
 
       <div class="form">
@@ -28,12 +28,7 @@
     </div>
   </div>
 
-  <div class="half-block d-sm-none d-lg-block d-xl-block">
-    <div class="background">
-      <img class="bg signin"
-        src="https://res.cloudinary.com/drnlhcap9/image/upload/v1668523000/static/img/bg-register_q5orde.png"
-        alt="barbershop room with chairs">
-    </div>
+  <div class="half-bg bg-signup d-sm-none d-lg-block d-xl-block">
   </div>
 
 </div>

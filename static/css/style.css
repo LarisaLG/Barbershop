@@ -17,6 +17,9 @@ body {
     margin: 0;
 }
 
+.errorlist {
+    color:#ff0000;
+}
 
 /***  Navigation  ***/
 
@@ -70,13 +73,17 @@ img.logo {
 
 
 .half-bg {
-    background-image: url("../../static/img/bg-home-md.jpg");
     background-repeat: no-repeat;
     background-position: -5rem 0;
     background-size: cover;
-    height: auto;
     margin-top: -60px;
+    width: 50%;
+    height: 110vh;
     z-index: 2;
+}
+
+.bg-home {
+    background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668551272/static/img/bg-home-md.jpg");
 }
 
 .btn-login {
@@ -210,4 +217,28 @@ img.logo {
 
 .booknow-block a {
     color: #FF9000;
+}
+
+
+/* Login page */
+
+.bg-login{
+    background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668536649/static/img/bg-login-md.jpg");
+    background-position: 0 0;
+    z-index: 2;
+}
+
+
+/* Sign Up page */
+
+.bg-signup {
+    background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668616044/static/img/bg-register-md.png");
+    background-position: 0 0;
+}
+
+
+/* Logout page */  
+.bg-logout {
+    background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668543776/static/img/bg-logout.jpg");
+    z-index: 2;
 }
