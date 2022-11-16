@@ -220,6 +220,17 @@ img.logo {
 }
 
 
+/*** Bookings page ***/
+
+.card {
+    width: 17rem;
+    display: inline-block;
+    align-items: center;
+}
+
+
+
+
 /* Login page */
 
 .bg-login{
