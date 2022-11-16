@@ -127,7 +127,7 @@ img.logo {
 /*** Services page ***/
 
 .services-page {
-    background-image: url("../../static/img/bg-intro.jpg");
+    background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668434943/static/img/bg-services.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -193,7 +193,7 @@ img.logo {
 /*** Booknow page ***/
 
 .booknow-page {
-    background-image: url("../../static/img/bg-intro.jpg");
+    background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668434943/static/img/bg-services.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -207,6 +207,13 @@ img.logo {
     border: 1px solid #6c757d;
     border-radius: 5px;
 }
+/* .form-center{
+    margin: 2rem auto;
+} */
+/* 
+.booknow-form{
+    width: 40%;
+} */
 
 .booknow-block {
     width: 100%;
