@@ -58,6 +58,8 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/bookings/'
 LOGOUT_REDIRECT_URL = '/'
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 MESSAGE_TAGS = {
     messages.INFO: 'alert-info',
     messages.SUCCESS: 'alert-success',
