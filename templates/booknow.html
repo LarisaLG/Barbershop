@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block content %}
-<div class="booknow-page d-flex justify-content-center">
-    <div class="p-5">
+<div class="booknow-page">
+    <div class="text-center p-5">
         <h2 class="bookings-title mb-4">Book your appointment</h2>
         {% if user.is_authenticated %}
         <div class="row booknow-contain">
@@ -13,16 +13,16 @@
                     {% csrf_token %}
                     {{ form.as_p }}
 
-                    <div class="intro-button mx-auto mb-3"><button class="btn btn-login" type="submit">Submit
+                    <div class="intro-button mx-auto"><button class="btn btn-login" type="submit">Submit
                             Booking</button>
                     </div>
                 </form>
             </div>
             {% else %}
-            <div class="booknow-contain col-xs-10 col-sm-10 col-md-6 d-flex">
+            <div class="booknow-contain col-xs-8 col-sm-8 col-md-6 d-flex">
 
-                <div class="pb-5 booknow-block">
-                    <p>To make a reservation, please <a href="/accounts/login/">login</a></p>
+                <div class="pb-3 booknow-block text-left">
+                    <p >To make a reservation, please <a href="/accounts/login/">login</a></p>
                     <p>If you have not created an account yet, then please <a href="/accounts/signup/">sign up</a></p>
                 </div>
             </div>
