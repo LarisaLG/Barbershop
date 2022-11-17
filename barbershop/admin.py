@@ -18,7 +18,9 @@ class BookingAdmin(admin.ModelAdmin):
                     'date',
                     'time',
                     'phone',
-                    'email')
+                    'email',
+                    'service'
+                    )
     search_fields = ('user',
                      'name',
                      'date',
