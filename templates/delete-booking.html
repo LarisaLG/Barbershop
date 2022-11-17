@@ -4,14 +4,14 @@
 
 <!-- The page to delete a booking -->
 
-<div class="booknow-page d-flex">
+<div class="d-flex">
     <div class=" text-center m-auto p-5">
         <!-- <div class="col-md-8 mt-3 text-center"> -->
         <h2 class="bookings-title mb-4">Delete your Booking</h2>
 
 
-        <!-- <form method="POST">
-        {% csrf_token %} -->
+        <form method="POST">
+        {% csrf_token %}
 
         <div class="delete-contain align-items-center">
 
@@ -19,29 +19,16 @@
                 <p>You are about to delete your booking.</p>
 
                 <button class="delete-btn btn btn-outline-warning mb-2" type="submit"> <i class="fa-solid fa-trash-can"></i>  Yes,
-                    delete
-                    booking</button>
+                    delete booking</button>
                 <a class="btn btn-outline-warning mx-auto mb-2" href="{% url 'bookings' %}" role="button">Back to my bookings
                 </a>
             </div>
 
         </div>
 
-
+        </form>
     </div>
-    <!-- <p class="text-center">You are about to delete your booking</p>  -->
-    <!-- <strong>{{b.service.service_name}}</strong> on <strong> {{b.date}} at {{b.time}}</strong></p> -->
-
-
-
-    <!-- </form> -->
 
 </div>
-</div>
-</div>
-
-
-
-
 
 {% endblock content %}
