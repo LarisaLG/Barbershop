@@ -56,16 +56,20 @@ a.nav-link:hover {
 }
 
 .btn-outline-warning:hover,
-.btn-outline-warning:focus {
+.btn-outline-warning:focus,
+.account-btn:hover,
+.account-btn:focus {
     color: #312E38;
     background-color: #FFA500;
     border-color: #FFA500;
 }
 
 
+
+
 /*** Index page ***/
 
-.half-block, .half-bg {
+.half-block {
     width: 50%;
     height: 100vh;
 }
@@ -85,6 +89,8 @@ img.logo {
     height: 110vh;
     z-index: 2;
 }
+
+
 
 .bg-home {
     background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668551272/static/img/bg-home-md.jpg");
@@ -210,17 +216,24 @@ img.logo {
     opacity: 0.9;
     border: 1px solid #6c757d;
     border-radius: 5px;
+
 }
 
 .booknow-block {
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     font-weight: 500;
-    min-width: fit-content;
+    /* min-width: fit-content; */
+    background-color: #312E38;
+    opacity: 0.9;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
 }
 
 .booknow-block a {
     color: #FF9000;
 }
+
+
 
 
 /*** Bookings page ***/
@@ -237,6 +250,9 @@ img.logo {
     font-weight: 500;
     border: 2px solid #ce0a0a;
 }
+
+
+
 
 
 /* Login page */
@@ -261,3 +277,27 @@ img.logo {
     background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668543776/static/img/bg-logout.jpg");
     z-index: 2;
 }
+
+
+/*** Media queries  ***/
+/* for screens that are 768px wide or less */
+@media screen and (max-width: 768px) {
+
+.half-block{
+    width: 100%;
+    border: 2px solid green;
+}
+
+.half-bg {
+    display: none;
+}
+
+
+/*** Change booking page  ***/
+
+.card-change {
+    width: 80%;    
+}
+
+}
+
