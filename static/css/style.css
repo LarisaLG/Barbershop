@@ -61,7 +61,7 @@ a.nav-link:hover {
 .account-btn:focus {
     color: #312E38;
     background-color: #FFA500;
-    border-color: #FFA500;
+    /* border-color: #FFA500; */
 }
 
 
@@ -82,7 +82,7 @@ img.logo {
 
 .half-bg {
     background-repeat: no-repeat;
-    background-position: -5rem 0;
+    background-position: center center;
     background-size: cover;
     margin-top: -60px;
     width: 50%;
@@ -281,7 +281,7 @@ img.logo {
 
 /*** Media queries  ***/
 /* for screens that are 768px wide or less */
-@media screen and (max-width: 768px) {
+@media (max-width: 912px) {
 
 .half-block{
     width: 100%;
