@@ -86,7 +86,7 @@ img.logo {
     background-size: cover;
     margin-top: -60px;
     width: 50%;
-    height: 110vh;
+    /* height: 110vh; */
     z-index: 2;
 }
 
@@ -220,9 +220,7 @@ img.logo {
 }
 
 .booknow-block {
-    /* margin-top: 5vh; */
     font-weight: 500;
-    /* min-width: fit-content; */
     background-color: #312E38;
     opacity: 0.9;
     border: 1px solid #6c757d;
@@ -259,7 +257,7 @@ img.logo {
 
 .bg-login{
     background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668536649/static/img/bg-login-md.jpg");
-    background-position: 0 0;
+    /* background-position: 0 0; */
     z-index: 2;
 }
 
@@ -268,9 +266,15 @@ img.logo {
 
 .bg-signup {
     background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668616044/static/img/bg-register-md.png");
-    background-position: 0 0;
+    /* background-position: 0 0; */
 }
 
+.form {
+    border: 2px solid #6c757d;
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 0 auto;
+}
 
 /* Logout page */  
 .bg-logout {
@@ -279,18 +283,30 @@ img.logo {
 }
 
 
+
 /*** Media queries  ***/
-/* for screens that are 768px wide or less */
+
+/* for screens that are 1024px wide or less */
+@media (max-width: 1024px) {
+    .half-bg {
+        background-position-x: 65%;
+    }
+
+    .form {
+        width: 75%;       
+    }
+}
+
+/* for screens that are 912px wide or less */
 @media (max-width: 912px) {
 
-.half-block{
-    width: 100%;
-    border: 2px solid green;
-}
+    .half-block{
+        width: 100%;
+    }
 
-.half-bg {
-    display: none;
-}
+    .half-bg {
+        display: none;
+    }
 
 
 /*** Change booking page  ***/
@@ -298,6 +314,12 @@ img.logo {
 .card-change {
     width: 80%;    
 }
-
 }
 
+/* for screens that are 480px wide or less */
+@media (max-width: 480px) {
+    .half-bg {
+        display: none;
+    }
+
+}

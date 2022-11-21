@@ -9,13 +9,13 @@
 
 <div class="wrapper d-flex justify-content-center">
 
-  <div class="half-block  d-flex h-100 d-flex justify-content-center align-items-center ">
+  <div class="half-block d-flex justify-content-center align-items-center ">
     <div class="logo-middle">
         <h3 class="text-center mb-5 mt-5">Sign in</h3>
-        <p class="mb-5">{% blocktrans %}If you have not created an account yet, then please
+        <p class="mb-5 pl-5 pr-5">{% blocktrans %}If you have not created an account yet, then please
           <a href="{{ signup_url }}" class="account-link orange">sign up</a> first.{% endblocktrans %}</p>
 
-      <div class="form form-login">
+      <div class="form">
         <form class="login" method="POST" action="{% url 'account_login' %}">
           {% csrf_token %}
           {{ form|crispy }}
