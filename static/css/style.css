@@ -321,5 +321,20 @@ img.logo {
     .half-bg {
         display: none;
     }
+    .services-page {
+        background-image: none;
+    }
 
+}
+
+/* for screens that are 320px wide or less */
+@media (max-width: 320px) {
+    .services-item,  .btn-light {
+        font-size: 0.8rem;
+        
+    }
+
+    a.btn-light {
+        padding: 4px 10px;
+    }
 }
