@@ -318,6 +318,7 @@ img.logo {
 .card-change {
     width: 80%;    
 }
+   
 }
 
 /* for screens that are 480px wide or less */
@@ -334,13 +335,26 @@ img.logo {
         width: 95%;
         padding: 10px;
     }
+
+    .services-contain {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .services-item,
+    .btn-light {
+        margin-left: 1px;
+        margin-right: 1px;
+        font-size: 0.8rem;
+    }
+
 }
 
 /* for screens that are 320px wide or less */
 @media (max-width: 320px) {
-    .services-item,  .btn-light {
+    /* .services-item, .btn-light {
         font-size: 0.8rem;
-    }
+    } */
 
     a.btn-light {
         padding: 4px 10px;
