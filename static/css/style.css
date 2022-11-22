@@ -243,13 +243,17 @@ img.logo {
 }
 
 .delete-btn {
-    background-color: #FF9000;
     color: #312E38 ;
     font-weight: 500;
-    border: 2px solid #ce0a0a;
+
 }
 
+/*** Change-booking page  */
 
+.change-form {
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+}
 
 
 
@@ -321,20 +325,26 @@ img.logo {
     .half-bg {
         display: none;
     }
-    .services-page {
+    .services-page,
+    .booknow-page {
         background-image: none;
     }
 
+    .change-form {
+        width: 95%;
+        padding: 10px;
+    }
 }
 
 /* for screens that are 320px wide or less */
 @media (max-width: 320px) {
     .services-item,  .btn-light {
         font-size: 0.8rem;
-        
     }
 
     a.btn-light {
         padding: 4px 10px;
     }
+
+    
 }
