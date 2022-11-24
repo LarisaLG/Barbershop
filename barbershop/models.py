@@ -53,8 +53,11 @@ class Booking(models.Model):
     service = models.ForeignKey(Service, null=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=50)
     email = models.EmailField(blank=True, null=True)
-    phoneRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
-    phone = models.CharField(validators=[phoneRegex], max_length=16, null=True, blank=True)
+    phoneRegex = RegexValidator(regex=r'^\+?1?\d{8,15}$',
+                                message="Please enter a valid phone number, e.g. 123456789. Up to 15 digits allowed.",
+                                code="invalid")
+    phone = models.CharField(validators=[phoneRegex], max_length=16,
+                             null=True, blank=True)
     date = models.DateField()
     time = models.CharField(max_length=30, choices=HOURS, default='10:00')
 
