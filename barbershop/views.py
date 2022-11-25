@@ -35,6 +35,9 @@ def booknow(request):
             booking_form.user = request.user
             booking_form.save()
             return redirect('bookings')
+        else:
+            messages.error(request, "Please enter correct data")
+            return render(request, 'booknow.html', {'form': form})
     form = BookingForm()
     return render(request, 'booknow.html', {'form': form})
 
@@ -75,7 +78,7 @@ def delete_booking(request, booking_id):
     """
     Function enables user to delete a booking record
     """
-  
+
     record = get_object_or_404(Booking, id=booking_id)
     if request.method == "POST":
         form = BookingForm(request.POST, instance=record)
@@ -87,4 +90,3 @@ def delete_booking(request, booking_id):
     context = {
         'form': form, 'record': record}
     return render(request, 'delete-booking.html', context)
-

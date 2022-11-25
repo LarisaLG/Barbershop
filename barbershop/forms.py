@@ -22,12 +22,6 @@ class BookingForm(forms.ModelForm):
     """This class generates a form from the Booking model
     """
 
-    name = forms.CharField()
-
-    email = forms.EmailField(required=False, widget=forms.TextInput(),)
-
-    phone = forms.IntegerField(required=True, widget=forms.TextInput(),)
-
     date = forms.DateField(
         validators=[MinValueValidator(get_min_date)],
         widget=DateInput(attrs={'type': 'date', 'min': get_min_date}))
