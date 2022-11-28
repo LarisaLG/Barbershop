@@ -1,7 +1,7 @@
 - [**UX (User Experience)**](#ux-user-experience)
   - [**User Stories**](#user-stories)
-- [**Design and Site Structure**](#design-choices)
-  - [**Functional Structure**](#fonts)
+- [**Design and Site Structure**](#design-structure)
+  - [**Functional Structure**](#functional-structure)
   - [**Wireframes**](#wireframes)
 - [**Features**](#features)
   - [**Site Navigation**](#site-navigation)
@@ -27,7 +27,6 @@
 ## Project goals
 This is the fourth project under the Code Institute Diploma in Software Development (E-commerce Applications) program.
 This website is a fictional barbershop called GOBARBER. It is designed to be responsive and accessible on a variety of devices for the ease of use of the site by potential users.
-
 
 
 ## UX (User Experience)
@@ -60,12 +59,18 @@ As a Site Administrator I would like to be able to create, view, edit and delete
 [Back to the top](#table-of-contents)
 
 
-## Design Choices and Site structure
-
-For the development of this site, the Gobarber template from the Figma community site was used. 
+## Design and Site structure
 
 The site was based on the Gobarber template from the Figma Community site. The look of the site, color scheme, font, logo and image for the home page were borrowed from the template.
+The main layout page can be seen below:
 
+<details>
+<summary>Gobarber website design template </summary>
+
+![Home page](static/assets/img/main-page.jpg)
+
+</details>
+<br />
 
 ### Functional Structure
 
@@ -88,8 +93,83 @@ Clicking on the price of the selected service redirects the authorized user to t
 The user is asked to fill out a form with the required fields - name, phone, service, time and date, and an optional field - email.
 After filling out the form, the user is redirected to the page of current bookings.
 
-**Booking page:** 
+**Booking page:** Only authenticated user ahave access to Booking page. The link to this page becomes visible in the navigation menu once a user is authenticated. Booking page shows to user information about made bookings and contain  Change button and Delete button for manage booking.
 
-**Change booking page:**
 
-**Delete booking page:**
+**Change booking page:** This page is available only to authenticated users and has the same functionality and form as the Booknow page, where user can change  booking details.
+
+**Delete booking page:** This page is only available to authenticated users and has the same functionality and form as the Booknow page, where the user can change the booking details. The user has the ability to delete his order by selecting the Delete button on the Booking page. After that, he will be redirected to the delete page where he needs to confirm his intention. After successfully deleting the booking, he will return to the Booking page and and receives a message at the top of the screen.
+Also, if the user changes his mind, he can return to the page by clicking on the Back to my Bookings button.
+
+[Back to the top](#table-of-contents)
+
+
+### Wireframes
+
+The wireframes were slightly modified during the actual creation of the project, e.g. with pages installed removed form for user convenience and better UX.
+The wireframes can be seen below:
+
+**For Mobile view and small screens**
+
+<details>
+<summary>Home page</summary>
+
+![Home page](static/assets/wireframes/home-mobile.png)
+
+</details>
+
+<details>
+<summary>Sign up page</summary>
+
+![Sign up page](static/assets/wireframes/register-mobile.png)
+
+</details>
+
+<details>
+<summary>Services page</summary>
+
+![Services page](static/assets/wireframes/services-mobile.png)
+
+</details>
+
+
+<details>
+<summary>Bookings page</summary>
+
+![Bookings page](static/assets/wireframes/bookings-mobile.png)
+
+</details>
+
+<br />
+
+**For Desktop view**
+<details>
+<summary>Home page</summary>
+
+![Home page](static/assets/wireframes/home-desktop.png)
+
+</details>
+
+<details>
+<summary>Sign up page</summary>
+
+![Sign up page](static/assets/wireframes/register-desktop.png)
+
+</details>
+
+<details>
+<summary>Services page</summary>
+
+![Services page](static/assets/wireframes/services-desktop.png)
+
+</details>
+
+<details>
+<summary>Bookings page</summary>
+
+![Bookings page](static/assets/wireframes/bookings-desktop.png)
+
+</details>
+<br />
+
+[Back to the top](#table-of-contents)
