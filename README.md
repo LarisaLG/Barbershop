@@ -4,7 +4,6 @@
   - [**Functional Structure**](#functional-structure)
   - [**Wireframes**](#wireframes)
 - [**Features**](#features)
-  - [**Site Navigation**](#site-navigation)
   - [**Responsive Design**](#responsive-design)
 - [**Technologies**](#technologies)
   - [**Languages**](#languages)
@@ -35,7 +34,7 @@ This website is a fictional barbershop called GOBARBER. It is designed to be res
 
 #### First time visitor goals
 
-As a first time visitor, I want:
+As the first time visitor, I want:
 * to easily understand the main purpose of the site,
 * to be able to easily navigate throughout the site,
 * to be able to register a user account to access all content without restrictions,
@@ -49,12 +48,12 @@ As a returning user, I want:
 * to sign in to my user account,
 * to make a service booking, 
 * to view my booking details, 
-* to edit mt booking details or delete them.
+* to edit my booking details or delete them.
 * to sign out of my account to keep my account safe.
 
 
 #### Site Administrator goals
-As a Site Administrator I would like to be able to create, view, edit and delete bookings data.    
+As a Site Administrator I would like to be able to create, view, edit and delete booking data.    
 
 [Back to the top](#table-of-contents)
 
@@ -62,7 +61,7 @@ As a Site Administrator I would like to be able to create, view, edit and delete
 ## Design and Site structure
 
 The site was based on the Gobarber template from the Figma Community site. The look of the site, color scheme, font, logo and image for the home page were borrowed from the template.
-The main layout page can be seen below:
+The main page layout can be seen below:
 
 <details>
 <summary>Gobarber website design template </summary>
@@ -173,3 +172,135 @@ The wireframes can be seen below:
 <br />
 
 [Back to the top](#table-of-contents)
+
+
+
+## Features
+
+### Navbar
+
+The navigation bar is present on all pages of the site. The navigation bar changes depending on whether the user is a guest or an authorized visitor.
+Also, the navigation bar is an adaptive element, and on mobile screens it collapses into a hamburger icon.
+
+Navigation bar for an unauthorized user.
+![Main navigation](static/assets/features/navbar.png)
+
+Navigation bar for an authorized user, menu items My Bookings and Logout are available.
+![Authenticathed user's Navigation](static/assets/features/logged-navbar.png)
+
+### Home page
+
+On the Home page a user can create account or Login from the menu or using links provided under logo. 
+![Home page](static/assets/features/home.png)
+
+### Sign up page
+
+To create an account user should fill in form provided on Sign up page.
+![Sign up page](static/assets/features/signup.png)
+
+
+### Login page
+
+To login the user should enter credential data that were used during sign up process.
+
+![Sign in page](static/assets/features/login.png)
+
+
+## Services page
+
+The Services page provides information of all available barbershop services.  User also can book necessary service straight from Services page by clicking on the services price.
+![Sign up page](static/assets/features/services.png)
+
+
+## Book Now page
+
+The Book Now button has a hover effect to provide user feedback:
+![Book Now button](static/assets/features/booknow-btn.png)
+
+Users must be logged in to make a booking. To book a service, the User must fill in the required fields in the form: name, phone, services, date, time and an optional email field.
+
+![Book Now page for the logged user](static/assets/features/booknow-logged.png)
+
+If the user not authenticated then the user will be shown a message that the user has to sign up or login.
+![Book Now page message](static/assets/features/booknow-msg.png)
+
+
+## Booking page
+
+The Booking page is available only to authorized users. The booking page displays the following data: order ID, date, time, service name and cost of the booked service.
+
+![Booking page](static/assets/features/bookings.png)
+
+If the user has not yet booked any services, then the user will be shown a message that the user has no bookings at the moment and there is an opportunity  to make a booking.
+
+![Booking page message](static/assets/features/bookings-msg.png)
+
+
+## Change booking page
+
+Each Booking can be changed or deleted. The user must be authenticated in order to access the change his bookings.
+The change booking page can be accessed for a specific booking. The page Change booking contains an auto-filled booking form. The user can change the fields at his discretion.
+
+![Change booking page](static/assets/features/change-booking.png)
+
+
+## Delete page
+
+The User must be authenticated to delete the booking. Delete booking page provides a two buttons: Yes, delete booking and Back to my bookings if the user change his mind. 
+Deletion will delete the only specific booking for the user.
+
+![Delete booking page](static/assets/features/delete.png)
+
+
+## Logout page
+
+An authenticated user can logout from account by clicking the Logout button, after which the user will be redirected to the Logout page where user need to confirm  to logout from account to prevent occasionally  log out of user account.
+
+![Logout page](static/assets/features/logout.png)
+
+
+### Responsive design
+The site has been designed to be responsive and adapted for desktop and mobile use.
+The project has been tested using a multi-device emulator with different screen sizes in the Google Chrome Developer Dashboard.
+
+[Back to the top](#table-of-contents)
+
+
+## Technologies Used
+
+### Languages
+  - Python
+  - JavaScript
+  - HTML5
+  - CSS3
+
+### Frameworks, Libraries, Programs
+
+  - [Django](https://www.djangoproject.com/): python framework used to create all the backend 
+
+
+### Database:
+  - [PostgreSQL](https://www.postgresql.org/): the database used to store all the data.
+
+
+### Programs & Tools
+
+
+- [Google Fonts:](https://fonts.google.com/) Was used to to incorporate font styles.  
+- [Font Awesome](https://fontawesome.com/): was used to create the icons used on the website.
+- [Bootstrap](https://getbootstrap.com/) Was used to create the front-end design.
+- [GitPod:](https://gitpod.io/) Gitpod was used as IDE to commit and push the project to GitHub.
+- [GitHub:](https://github.com/) Was used as a version control system to manage the code
+- [Figma:](https://www.figma.com/) Was used to create wireframes
+- [TinyPNG:](https://www.figma.com/) Was used to reduce the size and weight of images and optimizing interaction with the site 
+[Am I Responsive](http://ami.responsivedesign.is/) to generate an image showcasing the website's responsiveness to different screen sizes 
+- [Pip3](https://pypi.org/project/pip/): is the package manager to install Python modules and libraries.
+  - [Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/): "Green Unicorn" is a Python Web Server Gateway to translate HTTP Rquests for Python to understand.
+  - [Spycopg2](https://pypi.org/project/psycopg2/): PostgreSQL database adapter so I can manage the Database in Python. 
+  - [Cloudinary](https://cloudinary.com/): the image hosting service used to upload images and other media.
+  - [Heroku](https://dashboard.heroku.com/): the hosting service used to host the website.
+  - [VSCode](https://code.visualstudio.com/): the IDE used to develop the website.
+  - [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/open/): was used to debug the website.
+  - [W3C Validator](https://validator.w3.org/): was used to validate HTML5 code for the website.
+  - [W3C CSS validator](https://jigsaw.w3.org/css-validator/): was used to validate CSS code for the website.
+  - [Github Projects and kanban boards](https://github.com/lexach91/Django-social-network-PP4/projects) was used to track the progress of the project in general and of every application in the project.
