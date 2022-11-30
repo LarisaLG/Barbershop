@@ -68,9 +68,11 @@ def change_booking(request, booking_id):
             form.save()
             messages.success(request, 'You succesfully updated your booking.')
             return redirect('bookings')
+        else:
+            return render(request, 'change-booking.html', {'form': form})
     form = BookingForm(instance=record)
     context = {'form': form, 'record': record}
-
+# add phone validation
     return render(request, 'change-booking.html', context)
 
 
