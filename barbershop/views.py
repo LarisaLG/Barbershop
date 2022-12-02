@@ -43,8 +43,9 @@ def booknow(request):
 
 
 def bookings(request):
-    """This view checks if user is logged in and renders the bookings.html
-    page which shows user bookings and otherwise it redirects to the signup page
+    """This view checks if user is logged in and renders the
+    bookings.html page which shows user bookings and otherwise
+    it redirects to the signup page
     """
     if request.user.is_authenticated:
         bookings = Booking.objects.filter(user=request.user)
