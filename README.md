@@ -58,6 +58,12 @@ As a Site Administrator I would like to be able to create, view, edit and delete
 [Back to the top](#table-of-contents)
 
 
+### Agile tools
+
+The GitHub Projects section was used as a [Kanban board](https://github.com/users/LarisaLG/projects/17/views/1) for the development of this project, which made it possible to break down the project execution into subtasks and make it easier to complete and track project progress.
+[User stories](https://github.com/LarisaLG/barbershop/issues) were used to break down the project into sub-tasks and placed on the kanban board to work on them and track progress.
+
+
 ## Design and Site structure
 
 The site was based on the Gobarber template from the Figma Community site. The look of the site, color scheme, font, logo and image for the home page were borrowed from the template.
@@ -285,7 +291,6 @@ The project has been tested using a multi-device emulator with different screen 
 
 ### Programs & Tools
 
-
 - [Google Fonts:](https://fonts.google.com/) Was used to to incorporate font styles.  
 - [Font Awesome](https://fontawesome.com/): was used to create the icons used on the website.
 - [Bootstrap](https://getbootstrap.com/) Was used to create the front-end design.
@@ -293,14 +298,157 @@ The project has been tested using a multi-device emulator with different screen 
 - [GitHub:](https://github.com/) Was used as a version control system to manage the code
 - [Figma:](https://www.figma.com/) Was used to create wireframes
 - [TinyPNG:](https://www.figma.com/) Was used to reduce the size and weight of images and optimizing interaction with the site 
-[Am I Responsive](http://ami.responsivedesign.is/) to generate an image showcasing the website's responsiveness to different screen sizes 
+- [Am I Responsive](http://ami.responsivedesign.is/) to generate an image showcasing the website's responsiveness to different screen sizes 
 - [Pip3](https://pypi.org/project/pip/): is the package manager to install Python modules and libraries.
-  - [Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/): "Green Unicorn" is a Python Web Server Gateway to translate HTTP Rquests for Python to understand.
-  - [Spycopg2](https://pypi.org/project/psycopg2/): PostgreSQL database adapter so I can manage the Database in Python. 
-  - [Cloudinary](https://cloudinary.com/): the image hosting service used to upload images and other media.
-  - [Heroku](https://dashboard.heroku.com/): the hosting service used to host the website.
-  - [VSCode](https://code.visualstudio.com/): the IDE used to develop the website.
-  - [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/open/): was used to debug the website.
-  - [W3C Validator](https://validator.w3.org/): was used to validate HTML5 code for the website.
-  - [W3C CSS validator](https://jigsaw.w3.org/css-validator/): was used to validate CSS code for the website.
-  - [Github Projects and kanban boards](https://github.com/lexach91/Django-social-network-PP4/projects) was used to track the progress of the project in general and of every application in the project.
+- [Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/): "Green Unicorn" is a Python Web Server Gateway to translate HTTP Requests for Python to understand.
+- [Spycopg2](https://pypi.org/project/psycopg2/): PostgreSQL database adapter so I can manage the Database in Python. 
+- [Cloudinary](https://cloudinary.com/): the image hosting service used to upload images and other media.
+- [Heroku](https://dashboard.heroku.com/): the hosting service used to host the website.
+- [VSCode](https://code.visualstudio.com/): the IDE used to develop the website.
+- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/open/): was used to debug the website.
+- [W3C Validator](https://validator.w3.org/): was used to validate HTML5 code for the website.
+- [W3C CSS validator](https://jigsaw.w3.org/css-validator/): was used to validate CSS code for the website.
+- [Github Projects and kanban boards](https://github.com/lexach91/Django-social-network-PP4/projects) was used to track the progress of the project in general and of every application in the project.
+
+
+## Testing
+
+### Bugs
+
+#### Fixed Bugs
+
+|  Bug  |Bug image  |  Solution  |Status   |
+|--|--|--|--|
+|  
+Menu on mobile devices is positioned incorrectly |![](static/assets/bugs/menu-position.png)  | fixed CSS style   | fixed |
+|Booking form does not appear on the booking page  | ![](static/assets/bugs/booking-form.png) | fixed by passing form object to the booknow.html template , placing form tags in in the proper template booknow.html | fixed |
+| In the Gitpod Environment the site works with full CSS style,  but on Heroku the site  and the admin page (/admin) comes up without CSS styling  | - | Set DEBUG variable to False and remove the DISABLE_COLLECTSTATIC variable | fixed |
+| Function get_min_date isn't defined  | ![](static/assets/bugs/minvalue-validator.png)| fixed by removing function from views.py file and placing function in the forms.py so the form can access that function | fixed  |
+| When an invalid phone number is entered on the Booknow page, the form clears the fields and returns to its original state with no messages to the user. The Change Booking page also returns the form to its original state with pre-filled fields | - | Added regex validation for numeric input and displaying a message to the user | fixed  |
+| Pricing elements on the Services page are not displayed correctly on mobile devices |![](static/assets/bugs/services-btns-bug.png)  | added media queries rules for small screen devices  | fixed  |
+
+
+#### Unresolved Bugs
+No known bugs remaining
+
+
+[Back to the top](#table-of-contents)
+
+
+
+### Manual Testing
+
+#### Device Testing
+
+Project was tested using a multi-device emulator with different display sizes in the Google Chrome Developer Dashboard.
+The following devices have been tested:
+
+- Nest HubMax (Desktop)
+- iPad Pro (Tablet)
+- iPad Air (Tablet)
+- iPad Mini (Tablet)
+- Galaxy Tab S4 (Tablet)
+- Nexus 7 (Mobile)
+- Nokia N9 (Mobile)
+- iPhone 5/SE (Mobile)
+- iPhone 4 (Mobile)
+
+#### Browsers Tested
+
+Testing has been carried out on the  following browsers: 
+  - Google Chrome
+  - Firefox
+  - Microsoft Edge
+
+The site was constantly tested during the process of creating the site in the Gitpod Environment and the deployed site on Heroku was also tested in terms of user experience.
+The available functionality and user experience is reflected in the table below.
+
+| Goals/actions  | As a guest | As a logged user  | Result | Comment |
+|--|:--:|:--:|:--:|--|
+| Can use menu and navigating through pages | &check; | &check; | Pass | Click on menu item redirecs to appropriate page |
+| I can see the home page | &check; | &check; | Pass | |
+| I can see the Services page | &check; |&check;  |  Pass| |
+| I can see the Sign Up page | &check; |&check;  |  Pass| |
+| I can see the Login page  | &check; |&check;  |  Pass| |
+| I can see the Logout page  | &check; |&check;  |  Pass| |
+| I can click the Book Now button  | &check; |&check;  |  Pass| Redirects to the page witha message that the user must register or log in for guest or shows up form for authorised user |
+| I can see the Booknow page | &cross; | &check;  | Pass |A page is displayed with a message that the user must register or log in  |
+| I can fill fields in the form the Booknow page | &cross; | &check;  | Pass |This page and form is available only to an authorized user |
+| I can see the Bookings page   | &cross; | &check;  | Pass | This page is available only to an authorized user|
+| I can see the Change booking page  | &cross;  | &check;  | Pass | This page is available only to an authorized user|
+| I can edit booking in the form on the Change booking page  | &cross;  | &check;  | Pass |This page is available only to an authorized user ||
+| I can see the Delete booking page  |  &cross; | &check;  |Pass  | This page is available only to an authorized user |
+| |
+
+<br/>
+
+
+## Validation
+
+### HTML Validation:
+
+The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML of the website. 
+There were errors and warnings in the reports about unclosed elements and tags, incorrect values ​​and types of elements, unnecessary trailing slashes. All errors and warnings have been fixed, the project's HTML code has been re-checked without errors.
+
+
+<details><summary>Home page</summary>
+
+![](static/assets/validation/html/home.png)
+</details>
+<details><summary>Services page</summary>
+
+![](static/assets/validation/html/services.png)
+</details>
+<details><summary>Sign up page</summary>
+
+![](static/assets/validation/html/signup.png)
+</details>
+<details><summary>Login page</summary>
+
+![](static/assets/validation/html/login-error.jpg)
+</details>
+
+<details><summary>Book Now page for guests</summary>
+
+![](static/assets/validation/html/booknow-msg.png)
+</details>
+<details><summary>Book Now page for authorised user</summary>
+
+![](static/assets/validation/html/booknow-form-error.png)
+</details>
+<details><summary>Change booking page</summary>
+
+![](static/assets/validation/html/changebooking.png)
+</details>
+<details><summary>Delete booking page</summary>
+
+![](static/assets/validation/html/delete-booking-error.png)
+</details>
+<details><summary>Logout page</summary>
+
+![](static/assets/validation/html/logout.png)
+</details>
+
+---
+### CSS Validation:
+
+The website CSS style has successfully passed the [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/). 
+![](static/assets/validation/css-validation.png)
+
+---
+<br/>
+### Python Validation (PEP8)
+
+All Python code was manually checked using [CI Python Linter](https://pep8ci.herokuapp.com/). 
+The linter reports had messages about exceeding the string length of 79 characters, which have been fixed. Re-testing did not reveal any errors.
+
+urls.py
+![urls.py](static/assets/validation/pylint/urls.png)
+models.py
+![models.py](static/assets/validation/pylint/models.png)
+forms.py
+![forms.py](static/assets/validation/pylint/forms.png)
+views.py
+![views.py](static/assets/validation/pylint/views.png)
+
+---
