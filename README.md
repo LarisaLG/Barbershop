@@ -21,6 +21,12 @@
 
   
 # Portfolio Project 4 - Barbershop Gobarber reservation system  
+![](static/assets/img/amiresponsive-light.png)
+
+The deployed [GOBARBER](https://gobarbershop.herokuapp.com/) app.
+
+The [GitHub repository](https://github.com/LarisaLG/barbershop)
+
 
 
 ## Project goals
@@ -189,6 +195,7 @@ The navigation bar is present on all pages of the site. The navigation bar chang
 Also, the navigation bar is an adaptive element, and on mobile screens it collapses into a hamburger icon.
 
 Navigation bar for an unauthorized user.
+
 ![Main navigation](static/assets/features/navbar.png)
 
 Navigation bar for an authorized user, menu items My Bookings and Logout are available.
@@ -225,7 +232,9 @@ The Book Now button has a hover effect to provide user feedback:
 
 Users must be logged in to make a booking. To book a service, the User must fill in the required fields in the form: name, phone, services, date, time and an optional email field.
 
-![Book Now page for the logged user](static/assets/features/booknow-logged.png)
+#### Book Now page for the logged user
+
+<img src="static/assets/features/booknow-logged.png" width="670" />
 
 If the user not authenticated then the user will be shown a message that the user has to sign up or login.
 ![Book Now page message](static/assets/features/booknow-msg.png)
@@ -247,8 +256,8 @@ If the user has not yet booked any services, then the user will be shown a messa
 Each Booking can be changed or deleted. The user must be authenticated in order to access the change his bookings.
 The change booking page can be accessed for a specific booking. The page Change booking contains an auto-filled booking form. The user can change the fields at his discretion.
 
-![Change booking page](static/assets/features/change-booking.png)
 
+<img src="static/assets/features/change-booking.png" height="500" />
 
 ## Delete page
 
