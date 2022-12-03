@@ -278,6 +278,13 @@ An authenticated user can logout from account by clicking the Logout button, aft
 The site has been designed to be responsive and adapted for desktop and mobile use.
 The project has been tested using a multi-device emulator with different screen sizes in the Google Chrome Developer Dashboard.
 
+
+## Future features
+
+- page with information about working hours and contacts
+- blog page about news and trends
+- booking confirmation by email
+
 [Back to the top](#table-of-contents)
 
 
