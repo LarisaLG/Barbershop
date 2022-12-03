@@ -1,6 +1,4 @@
 from django.shortcuts import render, redirect, get_object_or_404
-# from django.http import HttpResponse
-# from requests import request
 from .models import *
 from .forms import BookingForm
 import datetime
@@ -29,7 +27,6 @@ def booknow(request):
     """
     if request.method == 'POST':
         form = BookingForm(request.POST)
-        # print("Errors: ", form.errors)
         if form.is_valid():
             booking_form = form.save(commit=False)
             booking_form.user = request.user
@@ -73,7 +70,6 @@ def change_booking(request, booking_id):
             return render(request, 'change-booking.html', {'form': form})
     form = BookingForm(instance=record)
     context = {'form': form, 'record': record}
-# add phone validation
     return render(request, 'change-booking.html', context)
 
 
